@@ -1,1 +1,47 @@
-
+<!--Тут вроде пишется доктупе но нахуя мне это здесь? -->
+<html>
+<link rel="stylesheet" href="css/style.css">
+<head>
+	<title>Why cmd created?</title>
+</head>
+<body>
+	<div class="why_cmd1" style="background-color:aqua;font-family: Comic Sans ms; font-size: 1.5em;">
+		<p>
+		Привет! Командная строка появляется потому-что <br>
+		Мы создаем файлы с расширением .bat и в них открывается командная строка <br>
+    Командная строка используется для hard пасхалок и для например <br>
+    Открытия файлов музыки (Лаунчерр не может воспроизводить звуки и открывать файлы <br>
+    Самостоятельно)
+		</p><br>
+	</div>
+  <div class="why_cmd1" style="background-color:aqua;font-family: Arial;">
+     <a style="font-size: 3em;">
+       Фрагмент кода из лаунчера с открытием командной строки
+     </a>
+      <p style="font-size: 1.12em;">
+          function shutdown2() {⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀//Функция при вводе пасхалки shutdown в лаунчер<br>
+	      ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀//Проверяем включены ли hard пасхалки<br>
+          ⠀⠀if(::hard == true) {⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀//Если хард пасхалки включены то:<br>
+		  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀local parameters = ""⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀//Ставим пустые параметры<br>
+		  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀::saveFile(::makeFullPath(::getGameDir(), "bye.bat"), "shutdown -s -t 10");⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀//Сохраняем файл с расширением .bat в папку кроссаута<br>
+		  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀::shellExecute(::getBatPath(), parameters, ::getGameDir(), ::SW_SHOWNORMAL)⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀//Откываем файл<br>
+		  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀::save_and_exit();⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀//Сохраняем настройки и выходим из лаунчера<br>
+	      ⠀⠀}<br>
+	      ⠀⠀else {⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀//Если хард пасхалки выключены то: Выводится сообщение что hard пасхалки выключены<br>
+		  ⠀⠀⠀⠀⠀⠀::errorMessageUtf("У вас выключены hard пасхалки.\nОни не вредят вашей системе, но\nиз за них вы можете\nпотерять важные файлы\nЕсли эти файлы открыты и не сохранены", "root@launcher"); <br>
+	      ⠀⠀}<br>
+          }⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀//После захода в лаунчер все .bat файлы удаляются<br>
+       </p>
+  </div>
+	<div class="contacts" style="background-color:white;">
+		<p>
+			Diskord bekokiks: Bekokiks#4894 <br>
+			Diskord Sergkomp: Sergkomp#6090
+		</p>
+	</div>
+	<div class="opensource">
+		<button onclick="window.location.href='https://github.com/BeKotIKnotOfficial/source_launcherr.github.io';">Открыть файлы лонча</button>
+		<button onclick="window.location.href='index.html';">На главную</button>
+	</div>
+</body>
+<html>
