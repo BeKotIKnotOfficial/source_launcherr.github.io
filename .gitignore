@@ -10,3 +10,4 @@ giscord_news.config.time
 cmd.exe
 bot.py
 autogithub.bat
+blacklisted.txt
