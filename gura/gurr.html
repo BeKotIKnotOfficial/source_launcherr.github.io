@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gurrout</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <style>
+        body {
+            background-color: #1b1c1d;
+            font-family: 'Montserrat', sans-serif;
+        }
+        h1 {
+			font-size: 4em;
+			height: 1%;
+			animation: shake 5s infinite;
+			color: white;
+            font-weight: 700;
+            text-align: center;
+			display:flex;
+			justify-content:center;
+			margin: 0;
+			padding-top:30px;
+		}
+
+		@keyframes shake {
+			0% { transform: translate(1px, 1px) rotate(0deg); }
+			10% { transform: translate(-1px, -2px) rotate(-1deg); }
+			20% { transform: translate(-3px, 0px) rotate(1deg); }
+			30% { transform: translate(3px, 2px) rotate(0deg); }
+			40% { transform: translate(1px, -1px) rotate(1deg); }
+			50% { transform: translate(-1px, 2px) rotate(-1deg); }
+			60% { transform: translate(-3px, 1px) rotate(0deg); }
+			70% { transform: translate(3px, 1px) rotate(-1deg); }
+			80% { transform: translate(-1px, -1px) rotate(1deg); }
+			0% { transform: translate(1px, 1px) rotate(0deg); }
+			}
+        h2 {
+            color: white;
+            text-align: center;
+        }
+        .images {
+			display:flex;
+			justify-content:center;
+			align-items:center; // add this line
+			flex-direction:column; // add this line
+		}
+		
+		img {
+			width:400px;
+			height:300px;
+			border-radius:2%;
+			margin-left:10px; // add this line
+			margin-right:10px; // add this line
+			border:none;
+			transition: transform .5s ease-in-out; 
+		}
+        .images img {
+            width: 400px;
+            height: 300px;
+            transition: transform 0.5s ease-in-out;
+        }
+        .images img:hover {
+            transform: scale(1.5);
+			z-index: 1;
+        }
+        button {
+            display:block; 
+            margin:auto; 
+            background-color:pink; 
+            border-radius:25px; 
+            padding:15px 110px; 
+			font-size: 2em;
+            transition-duration:.3s
+			
+         } 
+         button:hover {background-color:#00BFFF}
+		 
+		 
+#menu__toggle {
+  opacity: 0;
+}
+#menu__toggle:checked + .menu__btn > span {
+  transform: rotate(45deg);
+}
+#menu__toggle:checked + .menu__btn > span::before {
+  top: 0;
+  transform: rotate(0deg);
+}
+#menu__toggle:checked + .menu__btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+#menu__toggle:checked ~ .menu__box {
+  left: 0 !important;
+}
+.menu__btn {
+  position: fixed;
+  top: 5%;
+  left: 2.5%;
+  width: 30px;
+  height: 26px;
+  cursor: pointer;
+  z-index: 1;
+}
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: gray;
+  transition-duration: .25s;
+}
+.menu__btn > span::before {
+  content: '';
+  top: -8px;
+}
+.menu__btn > span::after {
+
+  content: '';
+  top: 8px;
+}
+.menu__box {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 300px;
+  height: 100%;
+  margin: 0;
+  padding: 80px 0;
+  list-style: none;
+  background-color: #ECEFF1;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
+  transition-duration: .25s;
+}
+.menu__item {
+  display: block;
+  padding: 12px 55px;
+  color: #333;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  transition-duration: 1s;
+
+}
+.menu__item:hover {
+  transform: scale(1.3);
+  z-index: -1;
+  animation: colorchange 5s infinite;
+}
+
+@keyframes colorchange {
+  0% {color: red;}
+  100% {color: red;}
+}
+.video-container {
+    display: flex;
+    justify-content: center;
+}
+a {
+    text-decoration: none;
+}
+    </style>
+</head>
+<body>
+	
+	
+    <h1>Gurrout</h1>
+    <h2>Crossout launcher project</h2>
+    <div class="images">
+      <img src="1.png" alt="">
+      <img src="2.png" alt="">
+      <img src="3.png" alt="">
+    </div><br>
+   <a href="https://drive.google.com/drive/folders/1p2-6QzPq9CviSB9yTgW8uges9-0reOwY"><button>cкачать</button></a>  <br>
+  <div class="video-container">
+    <iframe width="500" height="300" src="https://www.youtube.com/embed/YqNr0rs-39Y" frameborder="0" allowfullscreen></iframe>
+</div>
+<div class="hamburger-menu">
+    <input id="menu__toggle" type="checkbox" />
+    <label class="menu__btn" for="menu__toggle">
+      <span></span>
+    </label>
+
+    <ul class="menu__box">
+      <li><a class="menu__item" href="../index.html">Домой</a></li>
+      <li><a class="menu__item" href="../list.html">Проекты</a></li>
+      <li><a class="menu__item" href="../index.html">Команда</a></li>
+    </ul>
+  </div>
+</body>
+</html>
